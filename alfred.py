@@ -4,6 +4,7 @@ from eyecam import eyecamon
 import speech_recognition as sr
 import pyaudio
 import datetime
+from bots import youtube
 
 
 
@@ -40,6 +41,8 @@ def run():
         talk('Current time is ' + time)
     elif 'eyecam' in cd:
         return eyecamon()
+    elif 'youtube' in cd:
+        return youtube()
 
 
 
