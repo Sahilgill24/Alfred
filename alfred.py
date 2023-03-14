@@ -4,7 +4,8 @@ from eyecam import eyecamon
 import speech_recognition as sr
 import pyaudio
 import datetime
-from bots import youtube
+from bots import youtube,spotify,markuphero
+import pywhatkit
 
 
 
@@ -36,18 +37,53 @@ def run():
     cd=speech()
     if 'mouse' in cd:
         return videoon()
-    elif 'time' in cd:
+    
+def run2():
+    cd=speech()
+    if 'youtube' in cd:
+        return youtube()
+
+def run3():
+    cd=speech()
+    if 'spotify' in cd:
+        return spotify()
+
+def run4():
+    cd=speech()
+    if 'image converter' in cd:
+        return markuphero()
+
+def run5():
+    cd=speech()
+    if 'eyecam' in cd:
+        return eyecamon()
+
+def run6():
+    cd=speech()
+    if 'time ' in cd:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
-    elif 'eyecam' in cd:
-        return eyecamon()
-    elif 'youtube' in cd:
-        return youtube()
 
 
 
 while True:
-    run()
+    cd=speech()
+    if 'mouse' in cd:
+        run()
+
+    if 'time' in cd:
+        run6()
+
+    if 'eyecam' in cd:
+        run5()
+
+    if 'image converter' in cd:
+        run4()
+
+        
+
+        
+    
 
 
 
