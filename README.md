@@ -1,3 +1,4 @@
 # alfred
 
-It is a place to give everyone an idea about what your code does and for demos :)
+This is alfred 
+A voice assistant with a lot of cool features 

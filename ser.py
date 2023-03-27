@@ -1,5 +1,5 @@
 from flask import Flask , render_template
-from alfred import alfred
+from main import alfred
 
 app=Flask(__name__)
 
@@ -8,10 +8,9 @@ app=Flask(__name__)
 def home():
     return render_template('index.html')
 
-
 @app.route('/alfred')
 
-def activate():
+def page2():
     return alfred()
 
 
@@ -19,3 +18,6 @@ def activate():
 
 if __name__=="__main__":
     app.run(debug = True)
+
+
+
