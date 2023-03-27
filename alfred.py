@@ -64,27 +64,26 @@ def run6():
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
 
-
-
 while True:
-    cd=speech()
-    if 'mouse' in cd:
+    cd =speech()
+    if "mouse " in cd:
         run()
 
-    if 'time' in cd:
+    if "time " in cd:
         run6()
 
-    if 'eyecam' in cd:
+    if "eyecam" in cd:
         run5()
 
-    if 'image converter' in cd:
+    if "youtube" in cd:
+        run2()
+
+    if "spotify" in cd:
+        run3()
+
+    if "imageconverter" in cd:
         run4()
-
         
-
-        
-    
-
 
 
 
