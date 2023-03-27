@@ -1,5 +1,5 @@
 from flask import Flask , render_template
-from alfred import videoon
+from alfred import alfred
 
 app=Flask(__name__)
 
@@ -7,7 +7,12 @@ app=Flask(__name__)
 
 def home():
     return render_template('index.html')
-    
+
+
+@app.route('/alfred')
+
+def activate():
+    return alfred()
 
 
 

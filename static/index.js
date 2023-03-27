@@ -1,3 +1,7 @@
+Activate=document.querySelector(".button")
+
+
+
 function voice(){
   var recogniton = new webkitSpeechRecognition();
   recogniton.lang="en-GB";
@@ -11,3 +15,7 @@ function voice(){
 
 
 }
+
+Activate.addEventListener("click" , () =>{
+  window.location.pathname='/alfred'
+})

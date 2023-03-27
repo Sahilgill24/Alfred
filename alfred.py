@@ -33,57 +33,27 @@ def talk(t):
     engine.runAndWait()
 
 
-def run():
+def alfred():
     cd=speech()
     if 'mouse' in cd:
         return videoon()
-    
-def run2():
-    cd=speech()
-    if 'youtube' in cd:
-        return youtube()
-
-def run3():
-    cd=speech()
-    if 'spotify' in cd:
-        return spotify()
-
-def run4():
-    cd=speech()
-    if 'image converter' in cd:
-        return markuphero()
-
-def run5():
-    cd=speech()
-    if 'eyecam' in cd:
-        return eyecamon()
-
-def run6():
-    cd=speech()
-    if 'time ' in cd:
+    elif 'time' in cd:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
+    elif 'eyecam' in cd:
+        return eyecamon()
+    elif 'youtube' in cd:
+        return youtube()
+    elif 'play' in cd:
+        return spotify()
+    elif "image converter" in cd:
+        return markuphero()
+    else:
+        talk("pls say the command again ...... ")
 
 while True:
-    cd =speech()
-    if "mouse " in cd:
-        run()
+    alfred()
 
-    if "time " in cd:
-        run6()
-
-    if "eyecam" in cd:
-        run5()
-
-    if "youtube" in cd:
-        run2()
-
-    if "spotify" in cd:
-        run3()
-
-    if "imageconverter" in cd:
-        run4()
-        
 
 
 
