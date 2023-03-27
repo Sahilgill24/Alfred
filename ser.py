@@ -8,13 +8,10 @@ app=Flask(__name__)
 def home():
     return render_template('index.html')
 
-
 @app.route('/alfred')
 
-def activate():
-    return alfred()
-
-
+def page2():
+    alfred()
 
 
 if __name__=="__main__":
