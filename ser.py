@@ -1,5 +1,5 @@
 from flask import Flask , render_template
-from alfred import alfred
+from main import alfred
 
 app=Flask(__name__)
 
@@ -11,8 +11,13 @@ def home():
 @app.route('/alfred')
 
 def page2():
-    alfred()
+    return alfred()
+
+
 
 
 if __name__=="__main__":
     app.run(debug = True)
+
+
+

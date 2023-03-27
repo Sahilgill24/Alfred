@@ -1,10 +1,9 @@
 import pyttsx3 as pt
-from mouse import videoon
-from eyecam import eyecamon
+from mouse import youtube,videoon,markuphero,eyecamon,spotify
 import speech_recognition as sr
 import pyaudio
 import datetime
-from bots import youtube,spotify,markuphero
+
 import pywhatkit
 
 
@@ -51,8 +50,7 @@ def alfred():
     else:
         talk("pls say the command again ...... ")
 
-while True:
-    alfred()
+
 
 
 
